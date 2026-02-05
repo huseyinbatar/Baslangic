@@ -1,107 +1,59 @@
-* {
-  box-sizing: border-box;
+body {
   margin: 0;
   padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: black;
+  overflow: hidden;
+  color: white;
 }
 
-body {
-  min-height: 100vh;
-  font-family: "Trebuchet MS", "Arial", sans-serif;
-  color: #f8f3ee;
-  background-image: linear-gradient(
-      rgba(18, 12, 12, 0.65),
-      rgba(18, 12, 12, 0.7)
-    ),
-    url("https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=1800&q=80"),
-    url("https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=1800&q=80");
-  background-size: cover, cover, cover;
-  background-position: center, center left, center right;
-  background-blend-mode: overlay;
-}
-
-.overlay {
-  position: fixed;
-  inset: 0;
-  background: radial-gradient(circle at top, rgba(255, 190, 120, 0.2), transparent 55%),
-    linear-gradient(180deg, rgba(15, 10, 10, 0.4), rgba(15, 10, 10, 0.8));
-  pointer-events: none;
-}
-
-.content {
-  position: relative;
-  min-height: 100vh;
-  padding: 48px 16px 140px;
-}
-
-.hero {
-  text-align: center;
-  padding: 24px 16px 40px;
-}
-
-.hero h1 {
-  font-size: clamp(36px, 6vw, 80px);
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: #ffd6a5;
-  text-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
-}
-
-.tagline {
-  margin-top: 12px;
-  font-size: clamp(16px, 2vw, 24px);
-  color: #f0d7c0;
-}
-
-.lyrics {
+/* Karşılama Mesajı */
+.karsilama {
   position: absolute;
-  max-width: 240px;
-  padding: 14px 16px;
-  background: rgba(10, 10, 10, 0.45);
-  border: 1px solid rgba(255, 214, 165, 0.35);
-  border-radius: 16px;
-  font-size: 16px;
-  line-height: 1.4;
-  backdrop-filter: blur(4px);
-}
-
-.lyrics-top-left {
-  top: 22%;
-  left: 6%;
-}
-
-.lyrics-mid-right {
-  top: 46%;
-  right: 6%;
-}
-
-.lyrics-bottom-left {
-  bottom: 24%;
-  left: 10%;
-}
-
-.player {
-  position: fixed;
-  bottom: 24px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 2;
-  width: min(480px, 90vw);
-}
-
-.player audio {
+  top: 5%;
   width: 100%;
-  background: rgba(20, 20, 20, 0.6);
-  border-radius: 999px;
-  padding: 6px;
+  text-align: center;
+  font-size: 3em;
+  color: #ffcccb;
+  text-shadow: 2px 2px 5px black;
 }
 
-@media (max-width: 720px) {
-  .content {
-    padding-bottom: 180px;
-  }
+/* Şarkı Sözleri */
+.soz {
+  position: absolute;
+  font-size: 1.5em;
+  color: #ffffff;
+  text-shadow: 1px 1px 4px black;
+  width: 300px;
+}
 
-  .lyrics {
-    position: static;
-    margin: 16px auto 0;
-  }
+/* Kolaj Görselleri */
+.gorsel {
+  position: absolute;
+  width: 250px;
+  opacity: 0.5;
+  transition: transform 1s;
+}
+
+/* Hover animasyonu */
+.gorsel:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+/* Müzik Butonu */
+#muzikButon {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: #ffcccb;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+  z-index: 1000;
+}
+#muzikButon:hover {
+  background-color: #ff9999;
 }
