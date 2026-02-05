@@ -7,22 +7,29 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main class="center">
-      <div class="card">
-        <div class="icon" aria-hidden="true">🎸</div>
-        <h1>Defne’ye Hoş Geldin 🌸</h1>
-        <p class="subtitle">Senin için yumuşak bir gitar havası</p>
-        <audio id="music" controls loop>
-          <source src="music.wav" type="audio/wav" />
-          Tarayıcın müzik dosyasını desteklemiyor.
-        </audio>
-      </div>
-    </main>
-    <script>
-      const music = document.getElementById("music");
-      if (music) {
-        music.volume = 0.2;
-      }
-    </script>
+    <div class="overlay"></div>
+    <header class="hero">
+      <h1>Defne’ye Hoş Geldin</h1>
+      <p class="tagline">Duman ruhuyla, gitarın ışığında</p>
+    </header>
+
+    <section class="lyrics lyrics-top-left">
+      <p>“Yolun sonu görünmeden”</p>
+    </section>
+
+    <section class="lyrics lyrics-mid-right">
+      <p>“Karanlıkta bir ışık gibi”</p>
+    </section>
+
+    <section class="lyrics lyrics-bottom-left">
+      <p>“Sözlerim rüzgâra karışır”</p>
+    </section>
+
+    <footer class="player">
+      <audio autoplay loop controls>
+        <source src="music.wav" type="audio/wav" />
+        Tarayıcın müzik dosyasını desteklemiyor.
+      </audio>
+    </footer>
   </body>
 </html>
