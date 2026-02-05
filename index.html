@@ -1,37 +1,35 @@
 <!DOCTYPE html>
 <html lang="tr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Defne’nin Hikayesi Sayfasına Hoş Geldiniz</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="overlay"></div>
-    <main class="content">
-      <header class="hero">
-        <h1>Defne’nin Hikayesi Sayfasına Hoş Geldiniz</h1>
-        <p class="tagline">Duman ruhuyla, gitarın ışığında</p>
-      </header>
+<head>
+  <meta charset="UTF-8">
+  <title>DefneStory</title>
+  <link rel="stylesheet" href="stil.css">
+</head>
+<body>
+  <!-- Karşılama Mesajı -->
+  <h1 class="karsilama">Defne’ye Hoş Geldin!</h1>
 
-      <section class="lyrics lyrics-top-left">
-        <p>“Yolun sonu görünmeden”</p>
-      </section>
+  <!-- Şarkı Sözleri -->
+  <div class="soz" style="top:20%; left:10%;">“Her şey seninle başlar”</div>
+  <div class="soz" style="top:50%; left:30%;">“Belki de bir gün”</div>
+  <div class="soz" style="top:70%; left:60%;">“Ruhumu sarar melodin”</div>
 
-      <section class="lyrics lyrics-mid-right">
-        <p>“Karanlıkta bir ışık gibi”</p>
-      </section>
+  <!-- Kolaj Görselleri -->
+  <img src="assets/gitar1.png" class="gorsel" style="top:10%; left:5%;">
+  <img src="assets/gitar2.png" class="gorsel" style="top:40%; left:60%;">
+  <img src="assets/duman1.jpg" class="gorsel" style="top:20%; left:30%;">
+  <img src="assets/duman2.jpg" class="gorsel" style="top:60%; left:10%;">
 
-      <section class="lyrics lyrics-bottom-left">
-        <p>“Sözlerim rüzgâra karışır”</p>
-      </section>
-    </main>
+  <!-- Müzik -->
+  <audio id="muzik" src="music.wav" autoplay loop></audio>
+  <button id="muzikButon" onclick="toggleMuzik()">⏯ Sesi Aç/Kapa</button>
 
-    <footer class="player">
-      <audio autoplay loop controls>
-        <source src="music.wav" type="audio/wav" />
-        Tarayıcın müzik dosyasını desteklemiyor.
-      </audio>
-    </footer>
-  </body>
+  <script>
+    function toggleMuzik() {
+      var m = document.getElementById("muzik");
+      if(m.paused){ m.play(); }
+      else { m.pause(); }
+    }
+  </script>
+</body>
 </html>
